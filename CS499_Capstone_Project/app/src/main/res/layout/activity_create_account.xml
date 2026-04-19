@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#111111">
+
+    <!-- Top bar label -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Create Account"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:background="#1A1A1A" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <!-- Username (required) -->
+            <EditText
+                android:id="@+id/editNewUsername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Username"
+                android:textColor="#FFFFFF"
+                android:inputType="textPersonName"
+                android:background="#2A2A2A"
+                android:padding="14dp"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Phone (optional) -->
+            <EditText
+                android:id="@+id/editPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Phone Number (Optional)"
+                android:inputType="phone"
+                android:background="#2A2A2A"
+                android:padding="14dp"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Email (optional) -->
+            <EditText
+                android:id="@+id/editEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Email (Optional)"
+                android:textColor="#FFFFFF"
+                android:inputType="textEmailAddress"
+                android:background="#2A2A2A"
+                android:padding="14dp"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Password (required) -->
+            <EditText
+                android:id="@+id/editNewPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Password"
+                android:textColor="#FFFFFF"
+                android:inputType="textPassword"
+                android:background="#2A2A2A"
+                android:padding="14dp"
+                android:layout_marginBottom="24dp" />
+
+            <!-- Validation note -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Note: Error will be thrown if any Username, Phone Number, or Email already exists in the database, or if Username and Password are not provided."
+                android:textColor="#AAAAAA"
+                android:textSize="12sp"
+                android:layout_marginBottom="24dp" />
+
+            <Button
+                android:id="@+id/btnCreateAccount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Create Account" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

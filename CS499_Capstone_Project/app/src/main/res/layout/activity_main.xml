@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#101010">
+
+    <!-- Top bar -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Main Menu"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:background="#1A1A1A" />
+
+    <!-- Scrollable content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Welcome + announcement box -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#1E1E1E"
+                android:padding="16dp"
+                android:layout_marginBottom="12dp">
+
+                <TextView
+                    android:id="@+id/textWelcome"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Welcome! Today is loading..."
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:gravity="center" />
+            </LinearLayout>
+
+            <!-- Class schedule box -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#1E1E1E"
+                android:padding="16dp"
+                android:layout_marginBottom="12dp">
+
+                <TextView
+                    android:id="@+id/textScheduleHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Today's Class Schedule:"
+                    android:textColor="#FFFFFF"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp" />
+
+                <!-- Class list rendered here by MainActivity -->
+                <ListView
+                    android:id="@+id/listViewClasses"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="#2A2A2A"
+                    android:dividerHeight="1dp"
+                    android:nestedScrollingEnabled="false" />
+
+                <!-- Fallback if no classes loaded yet -->
+                <TextView
+                    android:id="@+id/textNoClasses"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="No classes scheduled for today."
+                    android:textColor="#888888"
+                    android:textSize="13sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnEditClasses"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Edit Classes (Admin)"
+                android:layout_marginBottom="8dp" />
+
+            <!-- SMS Reminder button (existing feature) -->
+            <Button
+                android:id="@+id/btnSmsReminder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Send SMS Class Reminder"
+                android:layout_marginBottom="8dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:background="#1A1A1A"
+        android:weightSum="5">
+
+        <Button
+            android:id="@+id/navProfile"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="View\nProfile"
+            android:textSize="10sp"
+            android:textColor="#AAAAAA"
+            android:background="@android:color/transparent"
+            android:padding="4dp" />
+
+        <Button
+            android:id="@+id/navSchedule"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="View\nSchedule"
+            android:textSize="10sp"
+            android:textColor="#FFFFFF"
+            android:background="@android:color/transparent"
+            android:padding="4dp" />
+
+        <Button
+            android:id="@+id/navRetail"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Retail"
+            android:textSize="10sp"
+            android:textColor="#AAAAAA"
+            android:background="@android:color/transparent"
+            android:padding="4dp" />
+
+        <Button
+            android:id="@+id/navChat"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Chat"
+            android:textSize="10sp"
+            android:textColor="#AAAAAA"
+            android:background="@android:color/transparent"
+            android:padding="4dp" />
+
+        <Button
+            android:id="@+id/navSmoothComp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Smooth\nComp"
+            android:textSize="10sp"
+            android:textColor="#AAAAAA"
+            android:background="@android:color/transparent"
+            android:padding="4dp" />
+    </LinearLayout>
+
+</LinearLayout>

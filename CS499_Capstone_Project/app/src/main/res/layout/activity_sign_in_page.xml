@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#111111">
+
+    <!-- Top bar -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sign In Page"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:background="#1A1A1A" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Class info card -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#1E1E1E"
+                android:padding="16dp"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:id="@+id/textClassDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Class Name · Time · Mat · Coach"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:gravity="center"
+                    android:minHeight="80dp" />
+            </LinearLayout>
+
+            <!-- Signed in list -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Signed in:"
+                android:textColor="#AAAAAA"
+                android:textSize="13sp"
+                android:layout_marginBottom="8dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#1E1E1E"
+                android:padding="12dp"
+                android:layout_marginBottom="24dp">
+
+                <ListView
+                    android:id="@+id/listSignedInStudents"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="#2A2A2A"
+                    android:dividerHeight="1dp"
+                    android:nestedScrollingEnabled="false" />
+
+                <TextView
+                    android:id="@+id/textNoSignIns"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="No students signed in yet."
+                    android:textColor="#888888"
+                    android:textSize="13sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <!-- Sign In button -->
+            <Button
+                android:id="@+id/btnSignInToClass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sign In to Class"
+                android:layout_marginBottom="8dp" />
+
+            <Button
+                android:id="@+id/btnBackToSchedule"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Back to Schedule" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

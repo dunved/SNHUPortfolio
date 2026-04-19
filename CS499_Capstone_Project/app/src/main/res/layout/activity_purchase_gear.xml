@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#111111">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Purchase Training Gear"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:background="#1A1A1A" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#1A1A1A"
+        android:padding="8dp"
+        android:gravity="end">
+        <Button
+            android:id="@+id/btnViewCartGear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View Cart (0)"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Row 1: Rashguard + Grappling Shorts -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:weightSum="2" android:layout_marginBottom="12dp">
+
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical"
+                    android:background="#1E1E1E" android:padding="12dp" android:layout_marginEnd="6dp">
+                    <ImageView android:layout_width="match_parent" android:layout_height="100dp"
+                        android:src="@drawable/rashguard"
+                        android:scaleType="centerCrop" android:layout_marginBottom="8dp"
+                        android:contentDescription="BJJ Rashguard" />
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="BJJ Rashguard" android:textColor="#FFFFFF" android:textSize="13sp"
+                        android:textStyle="bold" android:gravity="center" />
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="$50" android:textColor="#AAAAAA" android:textSize="12sp"
+                        android:gravity="center" android:layout_marginBottom="8dp" />
+                    <Button android:id="@+id/btnBuyRashguard" android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:text="Add to Cart" android:textSize="11sp" />
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical"
+                    android:background="#1E1E1E" android:padding="12dp" android:layout_marginStart="6dp">
+                    <ImageView android:layout_width="match_parent" android:layout_height="100dp"
+                        android:src="@drawable/grappling_shorts"
+                        android:scaleType="centerCrop" android:layout_marginBottom="8dp"
+                        android:contentDescription="Grappling Shorts" />
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="Grappling Shorts" android:textColor="#FFFFFF" android:textSize="13sp"
+                        android:textStyle="bold" android:gravity="center" />
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="$40" android:textColor="#AAAAAA" android:textSize="12sp"
+                        android:gravity="center" android:layout_marginBottom="8dp" />
+                    <Button android:id="@+id/btnBuyGrapplingShorts" android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:text="Add to Cart" android:textSize="11sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Row 2: BJJ Gi + Muay Thai Shorts -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:weightSum="2" android:layout_marginBottom="12dp">
+
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical"
+                    android:background="#1E1E1E" android:padding="12dp" android:layout_marginEnd="6dp">
+                    <ImageView android:layout_width="match_parent" android:layout_height="100dp"
+                        android:src="@drawable/bjj_gi"
+                        android:scaleType="centerCrop" android:layout_marginBottom="8dp"
+                        android:contentDescription="BJJ Gi" />
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="BJJ Gi + Belt" android:textColor="#FFFFFF" android:textSize="13sp"
+                        android:textStyle="bold" android:gravity="center" />
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="$100" android:textColor="#AAAAAA" android:textSize="12sp"
+                        android:gravity="center" android:layout_marginBottom="8dp" />
+                    <Button android:id="@+id/btnBuyGi" android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:text="Add to Cart" android:textSize="11sp" />
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical"
+                    android:background="#1E1E1E" android:padding="12dp" android:layout_marginStart="6dp">
+                    <ImageView android:layout_width="match_parent" android:layout_height="100dp"
+                        android:src="@drawable/muay_thai_shorts"
+                        android:scaleType="centerCrop" android:layout_marginBottom="8dp"
+                        android:contentDescription="Muay Thai Shorts" />
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="Muay Thai Shorts" android:textColor="#FFFFFF" android:textSize="13sp"
+                        android:textStyle="bold" android:gravity="center" />
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="$60" android:textColor="#AAAAAA" android:textSize="12sp"
+                        android:gravity="center" android:layout_marginBottom="8dp" />
+                    <Button android:id="@+id/btnBuyMuayThaiShorts" android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:text="Add to Cart" android:textSize="11sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Row 3: Boxing Gloves + Shinguards -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:weightSum="2" android:layout_marginBottom="16dp">
+
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical"
+                    android:background="#1E1E1E" android:padding="12dp" android:layout_marginEnd="6dp">
+                    <ImageView android:layout_width="match_parent" android:layout_height="100dp"
+                        android:src="@drawable/boxing_gloves"
+                        android:scaleType="centerCrop" android:layout_marginBottom="8dp"
+                        android:contentDescription="Boxing Gloves" />
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="Boxing Gloves" android:textColor="#FFFFFF" android:textSize="13sp"
+                        android:textStyle="bold" android:gravity="center" />
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="$80" android:textColor="#AAAAAA" android:textSize="12sp"
+                        android:gravity="center" android:layout_marginBottom="8dp" />
+                    <Button android:id="@+id/btnBuyGloves" android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:text="Add to Cart" android:textSize="11sp" />
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical"
+                    android:background="#1E1E1E" android:padding="12dp" android:layout_marginStart="6dp">
+                    <ImageView android:layout_width="match_parent" android:layout_height="100dp"
+                        android:src="@drawable/shinguards"
+                        android:scaleType="centerCrop" android:layout_marginBottom="8dp"
+                        android:contentDescription="Shinguards" />
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="Shinguards" android:textColor="#FFFFFF" android:textSize="13sp"
+                        android:textStyle="bold" android:gravity="center" />
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="$100" android:textColor="#AAAAAA" android:textSize="12sp"
+                        android:gravity="center" android:layout_marginBottom="8dp" />
+                    <Button android:id="@+id/btnBuyShinguards" android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:text="Add to Cart" android:textSize="11sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button android:id="@+id/btnReturnFromGear" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:text="Return to Retail" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

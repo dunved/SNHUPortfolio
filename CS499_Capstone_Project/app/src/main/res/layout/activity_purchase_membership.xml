@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#111111">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Purchase Membership"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:background="#1A1A1A" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#1A1A1A"
+        android:padding="8dp"
+        android:gravity="end">
+        <Button
+            android:id="@+id/btnViewCartMembership"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View Cart (0)"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Striking Membership -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:background="#1E1E1E"
+                android:padding="16dp" android:layout_marginBottom="12dp">
+                <ImageView android:layout_width="match_parent" android:layout_height="140dp"
+                    android:src="@drawable/striking_membership"
+                    android:scaleType="centerCrop" android:layout_marginBottom="12dp"
+                    android:contentDescription="Striking Membership" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="Striking Membership" android:textColor="#FFFFFF"
+                    android:textSize="15sp" android:textStyle="bold" android:layout_marginBottom="4dp" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="Muay Thai, Boxing, Kickboxing" android:textColor="#888888"
+                    android:textSize="12sp" android:layout_marginBottom="12dp" />
+                <Button android:id="@+id/btnBuyStriking" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:text="Add to Cart — $125/mo" />
+            </LinearLayout>
+
+            <!-- Grappling Membership -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:background="#1E1E1E"
+                android:padding="16dp" android:layout_marginBottom="12dp">
+                <ImageView android:layout_width="match_parent" android:layout_height="140dp"
+                    android:src="@drawable/grappling_membership"
+                    android:scaleType="centerCrop" android:layout_marginBottom="12dp"
+                    android:contentDescription="Grappling Membership" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="Grappling Membership" android:textColor="#FFFFFF"
+                    android:textSize="15sp" android:textStyle="bold" android:layout_marginBottom="4dp" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="BJJ, Wrestling, Judo" android:textColor="#888888"
+                    android:textSize="12sp" android:layout_marginBottom="12dp" />
+                <Button android:id="@+id/btnBuyGrappling" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:text="Add to Cart — $125/mo" />
+            </LinearLayout>
+
+            <!-- Ultimate Membership -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:background="#1E1E1E"
+                android:padding="16dp" android:layout_marginBottom="24dp">
+                <ImageView android:layout_width="match_parent" android:layout_height="140dp"
+                    android:src="@drawable/ultimate_membership"
+                    android:scaleType="centerCrop" android:layout_marginBottom="12dp"
+                    android:contentDescription="Ultimate Membership" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="Ultimate Membership" android:textColor="#FFFFFF"
+                    android:textSize="15sp" android:textStyle="bold" android:layout_marginBottom="4dp" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="Full access: Striking + Grappling + Open Mat"
+                    android:textColor="#888888" android:textSize="12sp" android:layout_marginBottom="12dp" />
+                <Button android:id="@+id/btnBuyUltimate" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:text="Add to Cart — $150/mo" />
+            </LinearLayout>
+
+            <Button android:id="@+id/btnReturnFromMembershipPurchase" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:text="Return to Retail Page" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

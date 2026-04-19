@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#111111">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Purchase Refreshments"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:background="#1A1A1A" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#1A1A1A"
+        android:padding="8dp"
+        android:gravity="end">
+        <Button
+            android:id="@+id/btnViewCartDrinks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View Cart (0)"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Water Bottle -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:background="#1E1E1E"
+                android:padding="12dp" android:layout_marginBottom="8dp">
+                <ImageView android:layout_width="70dp" android:layout_height="70dp"
+                    android:src="@drawable/water_bottle"
+                    android:scaleType="centerCrop" android:layout_marginEnd="12dp"
+                    android:contentDescription="Water Bottle" />
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical" android:gravity="center_vertical">
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="Water Bottle" android:textColor="#FFFFFF"
+                        android:textSize="14sp" android:textStyle="bold" />
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="$1.00" android:textColor="#AAAAAA" android:textSize="13sp" />
+                </LinearLayout>
+                <Button android:id="@+id/btnBuyWater" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text="Add" android:textSize="11sp" />
+            </LinearLayout>
+
+            <!-- Electrolyte 12oz -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:background="#1E1E1E"
+                android:padding="12dp" android:layout_marginBottom="8dp">
+                <ImageView android:layout_width="70dp" android:layout_height="70dp"
+                    android:src="@drawable/electrolyte"
+                    android:scaleType="centerCrop" android:layout_marginEnd="12dp"
+                    android:contentDescription="Electrolyte Mix 12oz" />
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical" android:gravity="center_vertical">
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="Electrolyte Mix 12 oz" android:textColor="#FFFFFF"
+                        android:textSize="14sp" android:textStyle="bold" />
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="$3.00" android:textColor="#AAAAAA" android:textSize="13sp" />
+                </LinearLayout>
+                <Button android:id="@+id/btnBuyElectrolyte12" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text="Add" android:textSize="11sp" />
+            </LinearLayout>
+
+            <!-- Electrolyte 16oz -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:background="#1E1E1E"
+                android:padding="12dp" android:layout_marginBottom="8dp">
+                <ImageView android:layout_width="70dp" android:layout_height="70dp"
+                    android:src="@drawable/electrolyte"
+                    android:scaleType="centerCrop" android:layout_marginEnd="12dp"
+                    android:contentDescription="Electrolyte Mix 16oz" />
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical" android:gravity="center_vertical">
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="Electrolyte Mix 16 oz" android:textColor="#FFFFFF"
+                        android:textSize="14sp" android:textStyle="bold" />
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="$3.50" android:textColor="#AAAAAA" android:textSize="13sp" />
+                </LinearLayout>
+                <Button android:id="@+id/btnBuyElectrolyte16" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text="Add" android:textSize="11sp" />
+            </LinearLayout>
+
+            <!-- Energy Drink -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:background="#1E1E1E"
+                android:padding="12dp" android:layout_marginBottom="24dp">
+                <ImageView android:layout_width="70dp" android:layout_height="70dp"
+                    android:src="@drawable/energy_drink"
+                    android:scaleType="centerCrop" android:layout_marginEnd="12dp"
+                    android:contentDescription="Energy Drink" />
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical" android:gravity="center_vertical">
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="Energy Drink" android:textColor="#FFFFFF"
+                        android:textSize="14sp" android:textStyle="bold" />
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="$3.00" android:textColor="#AAAAAA" android:textSize="13sp" />
+                </LinearLayout>
+                <Button android:id="@+id/btnBuyEnergyDrink" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text="Add" android:textSize="11sp" />
+            </LinearLayout>
+
+            <Button android:id="@+id/btnReturnFromDrinks" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:text="Return to Retail" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

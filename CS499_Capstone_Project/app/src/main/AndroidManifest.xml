@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.projecttwodundivedantam">
+
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-feature android:name="android.hardware.telephony" android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Anaconda"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ProjectTwoDundiVedantam">
+
+        <activity android:name=".LoginActivity" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".CreateAccountActivity"        android:exported="false" />
+        <activity android:name=".MainActivity"                 android:exported="false" />
+        <activity android:name=".ViewScheduleActivity"         android:exported="false" />
+        <activity android:name=".SignInPageActivity"           android:exported="false" />
+        <activity android:name=".ScheduleActivity"             android:exported="false" />
+        <activity android:name=".ViewProfileActivity"          android:exported="false" />
+        <activity android:name=".EditMembershipActivity"       android:exported="false" />
+        <activity android:name=".AddPaymentActivity"           android:exported="false" />
+        <activity android:name=".EditPaymentActivity"          android:exported="false" />
+        <activity android:name=".RetailActivity"               android:exported="false" />
+        <activity android:name=".PurchaseMembershipActivity"   android:exported="false" />
+        <activity android:name=".PurchaseGearActivity"         android:exported="false" />
+        <activity android:name=".PurchaseRefreshmentsActivity" android:exported="false" />
+        <activity android:name=".CartActivity"                 android:exported="false" />
+        <activity android:name=".ChatActivity"                 android:exported="false" />
+
+    </application>
+
+</manifest>
