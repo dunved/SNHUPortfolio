@@ -5,7 +5,6 @@
     android:orientation="vertical"
     android:background="#111111">
 
-    <!-- Top bar -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -28,7 +27,7 @@
             android:orientation="vertical"
             android:padding="16dp">
 
-            <!-- Welcome + announcement box -->
+            <!-- Welcome box -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -47,17 +46,17 @@
                     android:gravity="center" />
             </LinearLayout>
 
-            <!-- Class list box -->
-            <!-- Hint label (visible only to non-admin) -->
+            <!-- Tap hint -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Tap a class below to sign in."
+                android:text="Tap a class to sign in."
                 android:textColor="#AAAAAA"
                 android:textSize="12sp"
                 android:gravity="end"
                 android:layout_marginBottom="4dp" />
 
+            <!-- Class list box -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -66,13 +65,12 @@
                 android:padding="12dp"
                 android:layout_marginBottom="16dp">
 
-                <ListView
-                    android:id="@+id/listScheduleClasses"
+                <!-- Classes added dynamically -->
+                <LinearLayout
+                    android:id="@+id/containerScheduleClasses"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:divider="#2A2A2A"
-                    android:dividerHeight="1dp"
-                    android:nestedScrollingEnabled="false" />
+                    android:orientation="vertical" />
 
                 <TextView
                     android:id="@+id/textScheduleNoClasses"
@@ -84,7 +82,7 @@
                     android:visibility="gone" />
             </LinearLayout>
 
-            <!-- Admin-only: Edit Classes button (hidden by default) -->
+            <!-- Admin only: Edit Classes -->
             <Button
                 android:id="@+id/btnEditClasses"
                 android:layout_width="match_parent"
